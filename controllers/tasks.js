@@ -16,7 +16,7 @@ const getAllTasks = async (req, res) => {
 
 // create task controller
 const createTask = async (req, res) => {
-    // if error not occured (if every property is filled out)
+    // if error not occured (if every property from model is filled out)
     try {
         const task = await Task.create(req.body)
         res.status(201).json({ task })

@@ -9,12 +9,11 @@ const app = express();
 
 // middleware
 app.use(express.json())
+// middleware for static files 
+app.use(express.static('./public'))
 
 
 // routes
-app.get('/', (req, res) => {
-    res.send('Home page.')
-})
 
 // home page
 app.use('/api/v1/tasks', tasks)
